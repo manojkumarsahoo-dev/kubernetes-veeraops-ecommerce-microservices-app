@@ -6,17 +6,15 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-    - host:
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /api
             pathType: Prefix
             backend:
               service:
-                name: main-service
+                name: backend-service
                 port:
                   number: 80
-
           - path: /appliances
             pathType: Prefix
             backend:
@@ -24,7 +22,6 @@ spec:
                 name: appliances-service
                 port:
                   number: 80
-
           - path: /auto
             pathType: Prefix
             backend:
@@ -32,7 +29,6 @@ spec:
                 name: auto-service
                 port:
                   number: 80
-
           - path: /beauty
             pathType: Prefix
             backend:
@@ -40,7 +36,6 @@ spec:
                 name: beauty-service
                 port:
                   number: 80
-
           - path: /books
             pathType: Prefix
             backend:
@@ -48,7 +43,6 @@ spec:
                 name: books-service
                 port:
                   number: 80
-
           - path: /computers
             pathType: Prefix
             backend:
@@ -56,7 +50,6 @@ spec:
                 name: computers-service
                 port:
                   number: 80
-
           - path: /earphones
             pathType: Prefix
             backend:
@@ -64,7 +57,6 @@ spec:
                 name: earphones-service
                 port:
                   number: 80
-
           - path: /electronics
             pathType: Prefix
             backend:
@@ -72,7 +64,6 @@ spec:
                 name: electronics-service
                 port:
                   number: 80
-
           - path: /fashion
             pathType: Prefix
             backend:
@@ -80,7 +71,6 @@ spec:
                 name: fashion-service
                 port:
                   number: 80
-
           - path: /food
             pathType: Prefix
             backend:
@@ -88,7 +78,6 @@ spec:
                 name: food-service
                 port:
                   number: 80
-
           - path: /furniture
             pathType: Prefix
             backend:
@@ -96,7 +85,6 @@ spec:
                 name: furniture-service
                 port:
                   number: 80
-
           - path: /googlegrocery
             pathType: Prefix
             backend:
@@ -104,7 +92,6 @@ spec:
                 name: googlegrocery-service
                 port:
                   number: 80
-
           - path: /googlemusic
             pathType: Prefix
             backend:
@@ -112,7 +99,6 @@ spec:
                 name: googlemusic-service
                 port:
                   number: 80
-
           - path: /googlepay
             pathType: Prefix
             backend:
@@ -120,7 +106,6 @@ spec:
                 name: googlepay-service
                 port:
                   number: 80
-
           - path: /home
             pathType: Prefix
             backend:
@@ -128,7 +113,6 @@ spec:
                 name: home-service
                 port:
                   number: 80
-
           - path: /mobiles
             pathType: Prefix
             backend:
@@ -136,7 +120,6 @@ spec:
                 name: mobiles-service
                 port:
                   number: 80
-
           - path: /sports
             pathType: Prefix
             backend:
@@ -144,7 +127,6 @@ spec:
                 name: sports-service
                 port:
                   number: 80
-
           - path: /toys
             pathType: Prefix
             backend:
@@ -152,11 +134,17 @@ spec:
                 name: toys-service
                 port:
                   number: 80
-
           - path: /two-wheelers
             pathType: Prefix
             backend:
               service:
                 name: two-wheelers-service
+                port:
+                  number: 80
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: main-service
                 port:
                   number: 80
